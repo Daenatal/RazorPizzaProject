@@ -7,7 +7,8 @@ namespace RazorPizzaProject.Pages
 {
     public class OrdersModel : PageModel
     {
-        public List<PizzaOrder> PizzaOrders = new List<PizzaOrder>();
+        public List<PizzaOrder> pizzaOrders = new List<PizzaOrder>();
+
         private readonly ApplicationDbContext _context;
         public OrdersModel(ApplicationDbContext context)
         {
@@ -15,7 +16,7 @@ namespace RazorPizzaProject.Pages
         }
         public void OnGet()
         {
-            PizzaOrders = _context.PizzaOrders.ToList();
+            pizzaOrders = _context.PizzaOrders.ToList();
         }
     }
 }

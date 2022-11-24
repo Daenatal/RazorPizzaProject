@@ -1,27 +1,24 @@
 ﻿@page
 @model RazorPizzaProject.Pages.OrdersModel
 @{
-    ViewData["Title"] = "Orders Page";
 }
 
-<h3>Orders</h3>
-<hr />
+<h1>Orders</h1>
+
 <table class="table">
     <thead>
-        <tr>
-            <th>
-                Id
-            </th>
-            <th>
-                Pizza Name
-            </th>
-            <th>
-                Price
-            </th>
-        </tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Pizza Name
+        </th>
+        <th>
+            Price
+        </th>
     </thead>
     <tbody>
-        @foreach(var order in Model.PizzaOrders){
+        @foreach(var order in Model.pizzaOrders){
             <tr>
                 <td>
                     @order.Id
